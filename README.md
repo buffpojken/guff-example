@@ -67,3 +67,7 @@ Cool, within that ExpressJS-app we have a small server that provides all the sep
 ## Step 6
 
 There is no step 6.
+
+## Resources
+
+The DDB Book - the best single point of mastering DDB, worth every single cent. https://www.dynamodbbook.com 
