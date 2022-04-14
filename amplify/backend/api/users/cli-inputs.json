@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/users": {
+      "name": "/users",
+      "lambdaFunction": "guffexamplea8449e93",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

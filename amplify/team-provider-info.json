@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-guffexample-dev-190908-authRole",
+      "UnauthRoleArn": "arn:aws:iam::464636671766:role/amplify-guffexample-dev-190908-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::464636671766:role/amplify-guffexample-dev-190908-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-guffexample-dev-190908-deployment",
+      "UnauthRoleName": "amplify-guffexample-dev-190908-unauthRole",
+      "StackName": "amplify-guffexample-dev-190908",
+      "StackId": "arn:aws:cloudformation:eu-north-1:464636671766:stack/amplify-guffexample-dev-190908/9a1a6940-bc15-11ec-b725-0a10f2b7ad94",
+      "AmplifyAppId": "d26m3zxetnasbv"
+    },
+    "categories": {
+      "auth": {
+        "guffexamplea26517e4": {}
+      },
+      "function": {
+        "guffexamplea8449e93": {
+          "deploymentBucketName": "amplify-guffexample-dev-190908-deployment",
+          "s3Key": "amplify-builds/guffexamplea8449e93-4f327a376c3571655276-build.zip"
+        }
+      }
+    }
+  }
+}

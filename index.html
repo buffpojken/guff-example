@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Amplify Framework</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      html, body { font-family: "Amazon Ember", "Helvetica", "sans-serif"; margin: 0; }
+      a { color: #ff9900; }
+      h1 { font-weight: 300; }
+      hr { height: 1px; background: lightgray; border: none; }
+      .app { width: 100%; }
+      .app-header { color: white; text-align: center; background: linear-gradient(30deg, #f90 55%, #ffc300); width: 100%; margin: 0 0 1em 0; padding: 3em 0 3em 0; box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3); }
+      .app-logo { width: 126px; margin: 0 auto; }
+      .app-body { width: 400px; margin: 0 auto; text-align: center; }
+      .app-body button { background-color: #ff9900; font-size: 14px; color: white; text-transform: uppercase; padding: 1em; border: none; }
+      .app-body button:hover { opacity: 0.8; }
+    </style>
+  </head>
+
+  <body>
+    <div class="app">
+      <div class="app-header">
+        <div class="app-logo">
+          <img
+            src="https://aws-amplify.github.io/images/Logos/Amplify-Logo-White.svg"
+            alt="AWS Amplify"
+          />
+        </div>
+        <h1>Welcome to the Amplify example with a database!</h1>
+      </div>
+      <div class="app-body">
+        <h1>Provide email and wallet</h1>
+        <p>Of course, this wallet-field is just an example, you'll want to use whatever authenticated wallet-access you have.</p>
+        <form id="email-form">
+          <input id="wallet-field" name="wallet_id" placeholder="Wallet" /><br />
+          <input id="email-field" name="email" placeholder="Email" /><br />
+          <button type="submit" id="MutationEventButton">Add data</button>
+        </form>
+        <div id="MutationResult"></div>
+        <hr />
+
+        <h1>Add shipping data</h1>
+        <p>
+          Here's a very simple form, which assume you have an authenticated wallet reference (since we're using the wallet key as a unique identifier in the dynamodb database). I've also designed the DynamoDB schema according to best practice, which is to use a strong, unique identifier as the hash key, and then use sort-keys for scoping attributes. This results in a so called "sparse database", which is what DDB is designed to be. For more info on this, see https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/best-practices.html for technical stuff, and if you want to dive deep into this, I can't recommend this book enough - https://www.dynamodbbook.com - which is worth every, single cent if one wants to use cloud effeciently.
+        </p>
+
+        <form id="shipping-form" style="display:flex;flex-direction:column;">
+          <label for="name">Wallet_ID</label>
+          <input id="name" name="wallet" placeholder="Wallet ID" />
+          <br />
+          <label for="name">Name</label>
+          <input id="name" name="name" placeholder="Name" />
+          <br />
+          <label for="street">Street address</label>
+          <input id="street" name="street_address" placeholder="Street address" />
+          <br />
+          <label for="zip_code">Zip code</label>
+          <input id="zip_code" name="zip_code" placeholder="Zip code" />
+          <br />
+          <label for="city">City</label>
+          <input id="city" name="city" placeholder="City" />
+          <br />
+          <button type="submit" id="post">Post</button>
+        </form>
+
+        <hr />
+        <h1>Fetch a user</h1>
+        <p>This is just for demo purposes, since there's no authentication here whatsoever.</p>
+        <input id="fetch-wallet-field" placeholder="Wallet" /><br />
+        <input id="sk-field" placeholder="SK" /><br />
+        <button id="fetch-user">Fetch</button>
+        <p id="fetch-display"></p>
+      </div>
+    </div>
+    <script src="main.bundle.js"></script>
+  </body>
+</html>
