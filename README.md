@@ -4,6 +4,8 @@ The initial state of this project is based on the first step of the Amplify tuto
 as specified here https://docs.amplify.aws/start/getting-started/setup/q/integration/js/. No further config has 
 been done at this stage. Let's go! 
 
+For the video walkthrough of setting up this with Amplify, see https://youtu.be/B2rWei4IkO4
+
 ## Step 1
 
 Make sure we have a running clientside setup. 
